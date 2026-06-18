@@ -1,0 +1,99 @@
+.navbar {
+  width: 100%;
+  background: #0d1117;
+  border-bottom: 2px solid #222;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.navbar-logo {
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+
+/* TABS (center) */
+.navbar-tabs {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.navbar-tabs li {
+  color: #aaa;
+  cursor: pointer;
+  padding: 8px 12px;
+  position: relative;
+  transition: 0.2s;
+}
+
+/* HOVER */
+.navbar-tabs li:hover {
+  color: white;
+}
+
+/* ACTIVE TAB (like Pokémon red highlight) */
+.navbar-tabs .active {
+  color: white;
+}
+
+.navbar-tabs .active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ff3b3b;
+  border-radius: 2px;
+}
+
+/* SEARCH RIGHT */
+.navbar-search .input {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #2b2c37;
+  background: #16171d;
+  color: white;
+}
+/* container */
+.group {
+  position: relative;
+}
+
+/* dropdown */
+.suggestions {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+
+  background: #16171d;
+  border: 1px solid #2b2c37;
+  border-radius: 10px;
+
+  z-index: 9999;   /* 🔥 CRITICAL */
+  overflow: hidden;
+}
+
+/* items */
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #bdbecb;
+}
+
+.suggestion-item:hover {
+  background: #22232c;
+  color: white;
+}
